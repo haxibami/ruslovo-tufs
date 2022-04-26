@@ -1,6 +1,6 @@
 use clap::Parser;
 use regex::Regex;
-use tabled::{MaxWidth, Modify, Row, Style, Table, Tabled};
+use tabled::{MaxWidth, Modify, Rows, Style, Table, Tabled};
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
@@ -95,8 +95,8 @@ fn main() -> Result<()> {
     }
 
     let table = Table::new(wordsets)
-        .with(Style::PSEUDO) // use pseudo-table style
-        .with(Modify::new(Row(1..)).with(MaxWidth::truncating(20, "..."))); // limit each row's width to 10
+        .with(Style::modern()) // use pseudo-table style
+        .with(Modify::new(Rows::new(1..)).with(MaxWidth::truncating(20))); // limit each row's width to 10
 
     println!("{}", table);
 
