@@ -9,6 +9,10 @@ edition = "2021"
 
 clap = { version = "3.1", features = ["derive"] }
 regex = "1.5"
-ureq = { version = "2.4", features = ["charset"]}
+ureq = { version = "2.4", features = ["charset"] }
 tabled = "0.6"
 tl = "0.7"
+
+[[bin]]
+name = "rusl"
+path = "src/main.rs"
