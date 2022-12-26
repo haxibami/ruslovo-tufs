@@ -7,9 +7,9 @@ edition = "2021"
 
 [dependencies]
 
-clap = { version = "3.1", features = ["derive"] }
-regex = "1.5"
-ureq = { version = "2.4", features = ["charset"] }
+clap = { version = "3.2", features = ["derive"] }
+regex = "1.7"
+ureq = { version = "2.5", features = ["charset"] }
 tabled = "0.6"
 tl = "0.7"
 
